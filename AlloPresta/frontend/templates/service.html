@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<main>
+    <div class="bg-gray-100 min-h-screen flex flex-col">
+
+   
+     <!-- Conteneur pour le header -->
+     <div id="header-container"></div>
+    <!-- Page de confirmation -->
+    <div class="flex-grow flex items-center justify-center p-8">
+        <div class="max-w-3xl bg-[#fffaf3] p-8 rounded-2xl shadow-lg">
+            <h1 class="text-center text-3xl font-bold text-[#924C10] mb-4">Confirmation de votre commande</h1>
+            <p class="text-center text-gray-700 mb-6">Souhaitez-vous que votre commande soit urgente ou bien préférez-vous réserver une date spécifique pour la prestation ?</p>
+            
+            <form id="orderForm">
+                <!-- Choix de commande urgente -->
+                <div class="mb-4">
+                    <label class="flex items-center space-x-3">
+                        <input type="radio" id="urgent" name="orderType" class="w-5 h-5 text-[#924C10] border-gray-300 focus:ring-[#924C10]" onclick="toggleDateField(false)">
+                        <span class="text-gray-800">Commande Urgente(commander pour le même jour)</span>
+                    </label>
+                </div>
+
+                <!-- Choix de réservation -->
+                <div class="mb-4">
+                    <label class="flex items-center space-x-3">
+                        <input type="radio" id="reservation" name="orderType" class="w-5 h-5 text-[#924C10] border-gray-300 focus:ring-[#924C10]" onclick="toggleDateField(true)">
+                        <span class="text-gray-800">Réservation( Commander pour une date ulterieur)</span>
+                    </label>
+                </div>
+
+                <!-- Champ pour choisir la date de réservation (affiché uniquement si "Réservation" est sélectionné) -->
+                <div id="reservationDateField" class="hidden mb-4">
+                    <label for="reservationDate" class="text-gray-700">Choisissez la date de la prestation :</label>
+                    <input type="date" id="reservationDate" class="w-full p-2 mt-2 border-2 border-gray-300 rounded-md" required>
+                </div>
+
+                <!-- Boutons de confirmation -->
+                <div class="mt-6 flex justify-between items-center">
+                    <button type="button" id="cancelButton" class="bg-gray-400 text-white py-3 px-6 rounded-lg shadow hover:bg-gray-500 w-30">Annuler</button>
+                    <button type="submit" id="submitButton" class="bg-[#924C10] text-white py-3 px-6 rounded-lg shadow hover:bg-[#121325] w-30">Valider</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="footer-container"></div>
+</div>
+
+
+</main>

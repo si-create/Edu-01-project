@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails du Service</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../static/js/service.js"></script>
+</head>
+<body class="bg-gray-100">
+    <!-- Conteneur pour le header -->
+    <div id="header-container"></div>
+
+    <div class="container mx-auto py-10 text-2xl">
+        <!-- Section des détails -->
+        <div class="bg-white p-6 rounded-lg shadow text-center mb-6 max-w-3xl mx-auto">
+            <img id="service-image" src="" alt="Service Image" class="w-40 h-40 mx-auto mb-6">
+            <h1 id="service-title" class="text-xl font-bold mb-4"></h1>
+            <p id="service-description" class="text-gray-700"></p>
+        </div>
+
+        <!-- Formulaire pour entrer les détails -->
+        <div class="bg-white p-6 rounded-lg shadow max-w-3xl mx-auto">
+            <h2 class="text-center font-semibold text-[#121325] mb-4">Entrez les détails du service :</h2>
+            <form id="details-form" onsubmit="handleSubmit(event)">
+                <div class="grid grid-cols-1 gap-4 mb-4">
+                    <!-- Nombre d'habits -->
+                    <div>
+                        <label for="habits" class="block text-sm font-medium text-gray-700">Nombre d'habits</label>
+                        <input type="number" id="habits" name="habits" class="mt-1 block w-full border border-gray-300 rounded-md p-2" required>
+                    </div>
+                    <!-- Nombre de draps -->
+                    <div>
+                        <label for="draps" class="block text-sm font-medium text-gray-700">Nombre de draps</label>
+                        <input type="number" id="draps" name="draps" class="mt-1 block w-full border border-gray-300 rounded-md p-2" required>
+                    </div>
+                    <!-- Nombre de serviettes -->
+                    <div>
+                        <label for="serviettes" class="block text-sm font-medium text-gray-700">Nombre de serviettes</label>
+                        <input type="number" id="serviettes" name="serviettes" class="mt-1 block w-full border border-gray-300 rounded-md p-2" required>
+                    </div>
+                    <!-- Nombre de jeans -->
+                    <div>
+                        <label for="jeans" class="block text-sm font-medium text-gray-700">Nombre de jeans</label>
+                        <input type="number" id="jeans" name="jeans" class="mt-1 block w-full border border-gray-300 rounded-md p-2" required>
+                    </div>
+                </div>
+                <!-- Douche -->
+                <div class="mb-4">
+                    <label class="inline-flex items-center">
+                        <input type="checkbox" id="douche" name="douche" 
+                               class="h-5 w-5 border-2 border-gray-300 rounded text-[#924C10] focus:ring-[#924C10] checked:border-[#924C10] checked:bg-[#924C10]">
+                        <span class="ml-2 text-gray-700">Y a-t-il une douche ?</span>
+                    </label>
+                </div>
+                <!-- Nombre de douches (affiché dynamiquement) -->
+                <div id="nombre-douches-container" class="mb-4 hidden">
+                    <label for="nombre-douches" class="block text-sm font-medium text-gray-700">Nombre de douches</label>
+                    <input type="number" id="nombre-douches" name="nombre-douches" class="mt-1 block w-full border border-gray-300 rounded-md p-2">
+                </div>
+                <!-- Bouton d'envoi -->
+                <div class="flex justify-center">
+                    <button type="submit" class="border-4 border-[#924C10] text-black py-4 px-8 text-lg rounded-full hover:border-[#121325]">
+                        Envoyer
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!--Contenu pour le footer-->
+    <div id="footer-container"></div>
+</body>
+</html>

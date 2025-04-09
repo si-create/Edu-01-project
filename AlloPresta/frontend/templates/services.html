@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../static/js/service.js"></script>
+</head>
+<body>
+<body class="bg-gray-100">
+    <!-- Conteneur pour le header -->
+    <div id="header-container"></div>
+    <section class="text-center">
+        <div class="container mx-auto py-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Service Cards -->
+                <div class="bg-white p-6 rounded-lg shadow text-center">
+                    <img src="../static/image/services/femme-de-menage.png" alt="Ménage" class="w-40 h-40 mx-auto mb-6">
+                    <h3 class="text-lg font-semibold">Ménages</h3>
+                    <p>Besoin d'un intérieur impeccable ? Nos prestataires assurent un nettoyage efficace et minutieux.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow text-center">
+                    <a href="detail.html?service=lessive">
+                        <img src="../static/image/services/la-lessive.png" alt="Lessive" class="w-40 h-40 mx-auto mb-6">
+                        <h3 class="text-lg font-semibold">Lessives</h3>
+                        <p>Nos experts prennent en charge votre lessive, du lavage au repassage avec soin.</p>
+                    </a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow text-center">
+                    <img src="../static/image/services/nounou.png" alt="Nounou" class="w-40 h-40 mx-auto mb-6">
+                    <h3 class="text-lg font-semibold">Nounous</h3>
+                    <p>Trouvez une nounou de confiance pour veiller sur vos enfants selon vos besoins.</p>
+                </div>
+        
+                <div class="bg-white p-6 rounded-lg shadow text-center">
+                    <img src="../static/image/services/nourriture-chinoise.png" alt="Cuisinière" class="w-40 h-40 mx-auto mb-6">
+                    <h3 class="text-lg font-semibold">Cuisinière</h3>
+                    <p>Offrez-vous un repas fait maison par un cuisinier talentueux.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="text-center py-10 bg-white mt-10">
+        <h2 class="text-2xl font-bold">CARACTÉRISTIQUES</h2>
+        <div class="flex flex-col md:flex-row justify-center gap-6 mt-6">
+            <div class="w-40 h-40 border-4 border-[#924C10] rounded-full flex items-center justify-center text-center">
+                <span>Fiabilité et Professionnalisme</span>
+            </div>
+            <div class="w-40 h-40 border-4 border-[#924C10] rounded-full flex items-center justify-center text-center">
+                <span>Accessibilité et Innovation</span>
+            </div>
+            <div class="w-40 h-40 border-4 border-[#924C10] rounded-full flex items-center justify-center text-center">
+                <span>Sécurité et Engagement Responsable</span>
+            </div>
+        </div>
+    </section>
+
+    <!--Contenu pour le footer-->
+    <div id="footer-container"></div>
+</body>
+</html>

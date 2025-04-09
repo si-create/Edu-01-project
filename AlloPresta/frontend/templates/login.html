@@ -1,0 +1,50 @@
+{{template "header" .}}
+<div class="bg-gray-100">
+
+</div>
+    <!-- Header -->
+    <div id="header-container"></div>
+
+    <!-- Section de connexion et d'inscription -->
+    <div class="flex items-center justify-center min-h-screen">
+        <div class="bg-white p-8 rounded-lg shadow-lg w-[500px] max-w-3xl"> <!-- Augmenté la largeur -->
+            <!-- Tabs -->
+            <div class="flex justify-around mb-6"> <!-- Espacement augmenté -->
+                <button id="connexion-tab" class="w-full py-3 text-lg font-semibold text-gray-600" onclick="showForm('connexion')">
+                    Connexion
+                </button>
+                <button id="inscription-tab" class="w-full py-3 text-lg font-semibold text-gray-600" onclick="showForm('inscription')">
+                    Créer un compte
+                </button>
+            </div>
+
+            <!-- Formulaire de Connexion (initialement masqué) -->
+            <div id="connexion-form" class="hidden max-w-3xl">
+                <h2 class="text-2xl font-semibold text-center mb-6">Connexion</h2> <!-- Espacement augmenté -->
+                <form action="/Login" method="post">
+                    <input type="text" id="Numbersignup" name="Number" placeholder="Numéro" class="block w-full p-3 mb-6 border rounded-lg" required> <!-- Augmenté padding et espacement -->
+                    <input type="password" id="passwordSignin" name="passwordSignin" placeholder="Mot de Passe" class="block w-full p-3 mb-6 border rounded-lg" required>
+                    <button type="submit" class="text- px-6 py-3 border-4 border-[#924C10] rounded-lg w-full">Se Connecter</button> <!-- Espacement augmenté -->
+                </form>
+            </div>
+
+            <!-- Formulaire d'Inscription (initialement masqué) -->
+            <div id="inscription-form" class="hidden max-w-3xl">
+                <h2 class="text-2xl font-semibold text-center mb-6">Inscription</h2> <!-- Espacement augmenté -->
+                <form method="post" action="/Inscription">
+                    <input type="text" placeholder="Nom" id="Name" name="Name" class="block w-full p-3 mb-6 border rounded-lg" required> <!-- Augmenté padding et espacement -->
+                    <input type="text" placeholder="Prénom" id="Prenom" name="Prenom" class="block w-full p-3 mb-6 border rounded-lg" required>
+                    <input type="text" placeholder="Numéro" id="Number" name="Number" class="block w-full p-3 mb-6 border rounded-lg" required>
+                    <input type="password" placeholder="Mot de Passe" class="block w-full p-3 mb-6 border rounded-lg" required>
+                    <input type="password" placeholder="Confirmer le Mot de Passe" id="Password" name="Password" class="block w-full p-3 mb-6 border rounded-lg" required>
+                    <button type="submit" class="bg-[#924C10] text-white px-6 py-3 rounded-lg w-full">S'inscrire</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+    <script src="/static/js/service.js"></script>
+
+    {{template "footer" .}}

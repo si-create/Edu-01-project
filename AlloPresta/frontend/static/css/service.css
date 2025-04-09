@@ -1,0 +1,7 @@
+ /* Animation pour l'apparition des options */
+ .hidden {
+    display: none;
+}
+.visible {
+    display: inline-block;
+}
